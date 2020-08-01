@@ -100,3 +100,24 @@ end
 
 puts square_all([1, 2, 3, 4, 5])
  (need puts or it will return noting in the terminal)
+
+ ======================================================
+
+ # input: [1, 2, 3, 4, 5]
+# output: [1, 4, 9, 16, 25]
+# def square_all(nums)
+#   nums.map do |num|
+#     num ** 2
+#   end
+# end
+
+# puts square_all([1, 2, 3, 4, 5])
+
+============================================================
+With Class NOTES:
+
+# want to split array until the array lengths are equal to one
+# then, use helper method 'merge' to help sort the arrays
+# base case = when array length is 1
+#array is the Array
+#find mid point to split array: mid = array.length / 2
