@@ -20,8 +20,8 @@ def merge(left_items, right_items)
     left_index = 0
     right_index = 0
     sorted = []
-    while left_index < left.count || right_index < right.count
-        puts("#{left_index}, #{left.count}; #{right_index}, #{right.count}")
+    while left_index < left_items.count || right_index < right_items.count
+        puts("#{left_index}, #{left_items.count}; #{right_index}, #{right_items.count}")
         left_item = left_items[left_index]
         right_item = right_items[right_index]
         if left_item && !right_item
@@ -40,11 +40,15 @@ def merge(left_items, right_items)
             end
         end
     end
-    puts("Sorted #{left} and #{right} into #{sorted}")
+    puts("Sorted #{left_items} and #{right_items} into #{sorted}")
     return sorted
 end
 
 puts merge_sort([8, 6, 7, 5, 3, 0, 9])
+
+# questions:
+# - if left_item && !right_item ( what does !right_item mean? it's not there or zero?)
+# - what does this do in the function as a whole? left_index += 1, why need to do it?
 
 
 # Should return:
@@ -54,7 +58,7 @@ puts merge_sort([8, 6, 7, 5, 3, 0, 9])
 # I am array [8, 6, 7]
 # I was split into left: [8], right: [6, 7]
 # I am array [8]
-# I am a solo item so I am returning myself (?why doesn't function stop because of 'return'? why does it go on to right array?)
+# I am a solo item so I am returning myself 
 # I am array [6, 7]
 # I was split into left: [6], right: [7]
 # I am array [6]
